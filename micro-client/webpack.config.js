@@ -5,6 +5,9 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   mode: "development",
+  devServer: {
+    port: 8082
+  },
   resolve: {
     extensions: [".css", ".scss", ".js", ".jsx"],
   },
@@ -44,7 +47,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "MICRO",
       remotes: {
-        FIRST_APP: "FIRST_APP@http://localhost:8080/remoteEntry.js",
+        FIRST_APP: "FIRST_APP@http://localhost:8081/remoteEntry.js",
       },
     }),
   ],

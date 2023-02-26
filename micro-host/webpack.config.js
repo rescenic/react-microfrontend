@@ -5,6 +5,9 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   mode: "development",
+  devServer: {
+    port: 8081
+  },
   resolve: {
     extensions: [".css", ".scss", ".js", ".jsx"],
   },
